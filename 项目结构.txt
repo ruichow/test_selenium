@@ -1,0 +1,32 @@
+config：配置文件的目录
+    /config.ini:存放配置文件
+    /globalparam.py：重要的全局参数，如log，report，截图，测试报告的路径配置等等
+
+data/testdata:存放测试数据
+
+public:公共文件库
+    common：封装的公共方法
+        /basepage.py:封装的页面对象的基页面类
+        /datainfo.py:对Excel表读取，数据驱动
+        /driver.py:定义浏览器驱动函数，该函数可以进行配置，配置测试用例在不同的主机及浏览器下运行
+        /log.py：打印日志，打印在控制台和文件中
+        /mytest.py:封装的基础类，用于所有testcase
+        /publicfunction.py:存放测试截图方法
+        /pyselenium.py:对webdriver进行第二次封装（可以参考虫师的pyse，https://github.com/defnngj/pyse）
+        /readconfig.py:专门读取配置文件.ini的文件格式
+        /sendmail.py：配置邮件发送
+
+    page:使用PO模式编写测试脚本，存放page的目录
+        /loginPage.py：对用户登录操作进行封装
+
+report：测试报告
+    /image:截图目录
+    /log:日志目录
+    /testreport:测试报告目录
+
+testcase：存放测试用例
+    /test_login.py:登录用例
+    /login.py:登录用例（通过数据驱动（读取Excel文件）进行登录）******可以不用，一般情况下直接将用户名密码写在
+                代码中即可，因为自动化测试中登录时一般情况下不会做过多验证，所以需要修改的较少。
+
+run.py:运行所有测试用例（带有test_*的.py文件）
