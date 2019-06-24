@@ -16,7 +16,7 @@ logger=Log()
 recvaddress=["81525426@qq.com","309681965@qq.com"]
 #用户名和密码
 sendaddr_name="ruichow@163.com"
-sendaddr_pswd="sgzr3986925**"
+sendaddr_pswd="************"
 
 class SendMail:
     def __init__(self,recver=None):
